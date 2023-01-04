@@ -63,3 +63,8 @@ df.SibSp.describe()
 #родителей- детей на борту
 df.Parch.unique()
 df.Parch.describe()
+
+#удалим колонки кабин, имя, порт посадки на борт и номер билета
+df = df.drop(labels=['Cabin','Name','Ticket','Embarked'], axis=1)
+
+print(df.head(10))
